@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}<!--CODIGO DE PROTEÇÃO CONTRA ATAQUES-->
+        <table>
+        {{ form.as_table }} <!--chamando o "formulario para o html"-->
+         <!--".as_p" para ficar cada etapa do formulario em um paragrafo-->
+         <!--"table para ficar mais bonito o formulario, para funcionar, tem que deixar dentro de uma tag <table>"-->
+        </table>
+        
+        <input type = "submit" value="cadastrar" class = "btn btn-primary"> <!--Serve para conversar com o back-end-->
+    </form>
+{% endblock %}
