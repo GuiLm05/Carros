@@ -40,6 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cars',
     'accounts',
+    'crispy_forms',
+    'crispy_bootstrap5',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [
@@ -54,8 +57,12 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'APP.urls'
 
+CRISPY_TEMPLATE_PACK = 'bootstrap5'  
+
 TEMPLATES = [
+    
     {
+        
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': ['APP/templates'],
         'APP_DIRS': True,
